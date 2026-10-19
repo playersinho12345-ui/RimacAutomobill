@@ -1,0 +1,31 @@
+﻿@page
+@model RimacAutomobill.Pages.IndexModel
+
+<h1>Carros cadastrados</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Ano</th>
+            <th>Quilometragem</th>
+            <th>Valor da diária</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var carro in Model.Carros)
+        {
+            <tr>
+                <td>@carro.IdCarro</td>
+                <td>@carro.Marca</td>
+                <td>@carro.Modelo</td>
+                <td>@carro.AnoFabricacao</td>
+                <td>@carro.Quilometragem</td>
+                <td>@carro.ValorDiaria.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
